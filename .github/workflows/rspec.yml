@@ -7,9 +7,12 @@ jobs:
   rspec:
     runs-on: ubuntu-latest
     steps:
+      - name: Docker Cache
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Run rspec
-        run: |
-          make build run rspec stop
+        run: make build run rspec stop
