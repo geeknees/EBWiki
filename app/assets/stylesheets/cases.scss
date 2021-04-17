@@ -311,4 +311,20 @@ input.case-btn {
   a:visited {
     color: white;
   }
+  .btn {
+    text-transform: capitalize;
+  }
+}
+
+.row.case-btns {
+  .form-submit {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    .btn {
+      width: 100%
+    }
+  }
 }
